@@ -26,7 +26,7 @@ alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
 
- pessoa.fazerAniversario(){
+ pessoa.fazerAniversario = function(){
  	pessoa.idade++;
  }
 
@@ -41,7 +41,7 @@ valor dessa propriedade a quantidade passada por parâmetro;
 booleano que representa "verdadeiro";
 */
 
-pessoa.andar(x){
+pessoa.andar = function(x){
 	pessoa.caminhouQuantosMetros += x;
 	pessoa.andando = true;
 }
@@ -51,7 +51,7 @@ Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o val
 da propriedade `andando` para o valor booleano que representa "falso".
 */
 
-pessoa.parar(){
+pessoa.parar = function(){
 	pessoa.andando = false;
 }
 
@@ -60,7 +60,7 @@ Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
 
-pessoa.nomeCompleto(){
+pessoa.nomeCompleto = function(){
 	return 'Eae! me chamo ' + pessoa.nome + ' ' + pessoa.sobrenome + '. Brincadeira! Na verdade isso é só um teste por tanto meu nome não importa...';
 }
 
@@ -69,7 +69,7 @@ Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
 
-pessoa.mostrarIdade(){
+pessoa.mostrarIdade = function(){
 	return 'Puts, eu to mó veia. Tenho ' + pessoa.idade + ' anos. Sim essa é a minha idade mesmo, não to brincando...';
 }
 
@@ -78,7 +78,7 @@ Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
 
-pessoa.mostrarPeso(){
+pessoa.mostrarPeso = function(){
 	return 'Peso ' + pessoa.peso + 'Kg. Quem dera ;-;';
 }
 
@@ -87,7 +87,7 @@ Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
 
-pessoa.mostrarAltura(){
+pessoa.mostrarAltura = function(){
 	return 'Minha altura seria ' + pessoa.altura + 'm. Isso se eu tivesse uns 14 anos...';
 }
 
@@ -191,7 +191,7 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 
-pessoa.apresentacao(){
+pessoa.apresentacao = function(){
 	if(pessoa.sexo === 'F'){
 		var oi = 'Eae, eu sou a ';
 		return oi + pessoa.nomeCompleto + ', tenho ' + pessoa.anos + ' anos, ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje(SQN), eu ja caminhei ' + pessoa.caminhouQuantosMetros + ' centimetros!';
